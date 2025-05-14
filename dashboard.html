@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TimeSaver V1 - Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <h1>TimeSaver V1</h1>
+            <button onclick="toggleMenu()">☰ More</button>
+        </header>
+        <div class="wallet-info">
+            <h2>Wallet Balance</h2>
+            <p id="wallet-balance">Loading...</p>
+        </div>
+        <div class="chart-container">
+            <h2>Live Chart</h2>
+            <canvas id="chart"></canvas>
+        </div>
+        <div class="trades">
+            <h2>Recent Trades</h2>
+            <ul id="trade-list"></ul>
+        </div>
+        <div class="actions">
+            <button onclick="fetchData()">🔁 Refresh</button>
+            <button onclick="depositBTC()">💰 Deposit BTC</button>
+        </div>
+        <div id="settings-menu" class="hidden">
+            <h3>Change Password</h3>
+            <input type="password" id="old-password" placeholder="Old Password">
+            <input type="password" id="new-password" placeholder="New Password">
+            <button onclick="changePassword()">Update</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
